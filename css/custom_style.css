@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+#semail {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 21px;
+    font-family: 'Oswald', sans-serif;
+}
+.text-container {
+    font-family: 'Lobster', cursive;
+}
+
+.heading {  
+    font-family: 'Akronim', cursive;
+}
