@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Friends Matrimony</title>
+
+    <meta name="description" content="Exclusive Matrimony services for Indian Brides and Grooms Around the World, Friendsmatrimony.com is a Great Place to find your Life Partner.">
+    <meta name="keywords" content="Friends Matrimony Friendsmatrimony.ca Friendsmatrimony.com exclusive matrimony portal Sri Lankans matrimony services life partner perfect match love register home login search create profiles.">
+    <meta name="author" content="isoftfriends">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <main class="page-wrapper">
+
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/fm_logo.png" width="110" alt="Silicon">
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="profile.html" class="nav-link">Profiles</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="profile.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Search</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="profile.html" class="dropdown-item">Simple Search</a></li>
+                    <li><a href="profile.html" class="dropdown-item">Advance Search</a></li>
+                    <li><a href="profile.html" class="dropdown-item">Keyword Search</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="pricing.html" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="signin.html" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="bx bx-user fs-4 lh-1 me-1"></i>
+                &nbsp;Login
+              </a>
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="signin.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+            <i class="bx bx-user fs-5 lh-1 me-1"></i>
+            &nbsp;Login
+          </a>
+        </div>
+      </header>
+
+      
+      <!-- Hero -->
+      <section class="py-4">
+        <div style="height: 80px;"></div>
+        <div class="container pb-2 py-lg-3">
+          <nav class="pb-4 mb-lg-3" aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+              <li class="breadcrumb-item">
+                <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+
+      <!-- Plans comparison -->
+      <section class="container pb-5 mb-md-3 mb-lg-5">
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center text-md-start">
+            <h2 class="h1 mb-4">Membership Packages</h2>
+            <p class="fs-lg mb-md-0">Choose the option that makes the most sense for your business.</p>
+          </div>
+          <div class="col-md-8">
+            <div class="row row-cols-1 row-cols-md-3">
+              <div class="col text-md-center pb-2 mb-4">
+                <h3 class="h5 mb-2 mb-md-3">Team</h3>
+                <ul class="d-md-none list-unstyled">
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Users:&nbsp;</span>
+                    1 included
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Member support via email:&nbsp;</span>
+                    Standard
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Live chat support:&nbsp;</span>
+                    <i class="bx bx-x lead text-muted"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">IT security and legal review:&nbsp;</span>
+                    <i class="bx bx-x lead text-muted"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Projects:&nbsp;</span>
+                    4 projects
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Comments and sharing:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Zoom integration:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Ongoing strategy calls:&nbsp;</span>
+                    <i class="bx bx-x lead text-muted"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Analytics dashboard:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Get custom integrations:&nbsp;</span>
+                    <i class="bx bx-x lead text-muted"></i>
+                  </li>
+                </ul>
+                <button type="button" class="btn btn-outline-primary w-100 w-md-auto">Free trial</button>
+              </div>
+              <div class="col text-md-center pb-2 mb-4">
+                <h3 class="h5 mb-2 mb-md-3">Company</h3>
+                <ul class="d-md-none list-unstyled">
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Users:&nbsp;</span>
+                    5 included
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Member support via email:&nbsp;</span>
+                    3 hours
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Live chat support:&nbsp;</span>
+                    10+ members
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">IT security and legal review:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Projects:&nbsp;</span>
+                    Unlimited
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Comments and sharing:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Zoom integration:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Ongoing strategy calls:&nbsp;</span>
+                    <i class="bx bx-x lead text-muted"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Analytics dashboard:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Get custom integrations:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                </ul>
+                <button type="button" class="btn btn-outline-primary w-100 w-md-auto">Get started</button>
+              </div>
+              <div class="col text-md-center mb-3">
+                <h3 class="h5 mb-2 mb-md-3">Enterprise</h3>
+                <ul class="d-md-none list-unstyled">
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Users:&nbsp;</span>
+                    10 +
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Member support via email:&nbsp;</span>
+                    With highest priority
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Live chat support:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">IT security and legal review:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Projects:&nbsp;</span>
+                    Unlimited
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Comments and sharing:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Zoom integration:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Ongoing strategy calls:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2">
+                    <span class="text-dark fw-medium">Analytics dashboard:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                  <li class="d-flex align-items-center p-2 bg-secondary">
+                    <span class="text-dark fw-medium">Get custom integrations:&nbsp;</span>
+                    <i class="bx bx-check lead text-primary"></i>
+                  </li>
+                </ul>
+                <button type="button" class="btn btn-outline-primary w-100 w-md-auto">Get started</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-none d-md-block pt-5 mt-2 pb-4">
+          <div class="row g-0">
+            <div class="col-md-4 text-dark fw-semibold ps-4 pe-2 py-4">Users</div>
+            <div class="col-md-8 text-center">
+              <div class="row row-cols-3 g-0">
+                <div class="col px-2 py-4">1 included</div>
+                <div class="col position-relative bg-primary px-2 py-4">
+                  <span class="text-light opacity-80">5 included</span>
+                  <span class="position-absolute start-0 bottom-100 w-100 bg-primary rounded-3 rounded-bottom-0" style="height: 2rem;"></span>
+                </div>
+                <div class="col px-2 py-4">10+</div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0 bg-secondary rounded-3">
+            <div class="col-md-4 text-dark fw-semibold ps-4 pe-2 py-4">Member support via email</div>
+            <div class="col-md-8 text-center">
+              <div class="row row-cols-3 g-0">
+                <div class="col px-2 py-4">Standard</div>
+                <div class="col bg-primary px-2 py-4">
+                  <span class="text-light opacity-80">3 hours</span>
+                </div>
+                <div class="col px-2 py-4">With highest priority</div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-4 text-dark fw-semibold ps-4 pe-2 py-4">Live chat support</div>
+            <div class="col-md-8 text-center">
+              <div class="row row-cols-3 g-0">
+                <div class="col px-2 py-4">
+                  <i class="bx bx-x lead text-muted"></i>
+                </div>
+                <div class="col bg-primary px-2 py-4">
+                  <span class="text-light opacity-80">10+ members</span>
+                </div>
+                <div class="col px-2 py-4">Unlimited</div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0 bg-secondary rounded-3">
+            <div class="col-md-4 text-dark fw-semibold ps-4 pe-2 py-4">IT security and legal review</div>
+            <div class="col-md-8 text-center">
+              <div class="row row-cols-3 g-0">
+                <div class="col px-2 py-4">
+                  <i class="bx bx-x lead text-muted"></i>
+                </div>
+                <div class="col bg-primary px-2 py-4">
+                  <i class="bx bx-check lead text-light"></i>
+                </div>
+                <div class="col px-2 py-4">
+                  <i class="bx bx-check lead text-primary"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-4 text-dark fw-semibold ps-4 pe-2 py-4">Projects</div>
+            <div class="col-md-8 text-center">
+              <div class="row row-cols-3 g-0">
+                <div class="col px-2 py-4">4 projects</div>
+                <div class="col bg-primary px-2 py-4">
+                  <span class="text-light opacity-80">Unlimited</span>
+                </div>
+                <div class="col px-2 py-4">Unlimited</div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0 bg-secondary rounded-3">
+            <div class="col-md-4 text-dark fw-semibold ps-4 pe-2 py-4">Comments and sharing</div>
+            <div class="col-md-8 text-center">
+              <div class="row row-cols-3 g-0">
+                <div class="col px-2 py-4">
+                  <i class="bx bx-check lead text-primary"></i>
+                </div>
+                <div class="col bg-primary px-2 py-4">
+                  <i class="bx bx-check lead text-light"></i>
+                </div>
+                <div class="col px-2 py-4">
+                  <i class="bx bx-check lead text-primary"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-4 text-dark fw-semibold ps-4 pe-2 py-4">Zoom integration</div>
+            <div class="col-md-8 text-center">
+              <div class="row row-cols-3 g-0">
+                <div class="col px-2 py-4">
+                  <i class="bx bx-check lead text-primary"></i>
+                </div>
+                <div class="col bg-primary px-2 py-4">
+                  <i class="bx bx-check lead text-light"></i>
+                </div>
+                <div class="col px-2 py-4">
+                  <i class="bx bx-check lead text-primary"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0 bg-secondary rounded-3">
+            <div class="col-md-4 text-dark fw-semibold ps-4 pe-2 py-4">Ongoing strategy calls</div>
+            <div class="col-md-8 text-center">
+              <div class="row row-cols-3 g-0">
+                <div class="col px-2 py-4">
+                  <i class="bx bx-x lead text-muted"></i>
+                </div>
+                <div class="col bg-primary px-2 py-4">
+                  <i class="bx bx-x lead text-light opacity-50"></i>
+                </div>
+                <div class="col px-2 py-4">
+                  <i class="bx bx-check lead text-primary"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-4 text-dark fw-semibold ps-4 pe-2 py-4">Analytics dashboard</div>
+            <div class="col-md-8 text-center">
+              <div class="row row-cols-3 g-0">
+                <div class="col px-2 py-4">
+                  <i class="bx bx-check lead text-primary"></i>
+                </div>
+                <div class="col bg-primary px-2 py-4">
+                  <i class="bx bx-check lead text-light"></i>
+                </div>
+                <div class="col px-2 py-4">
+                  <i class="bx bx-check lead text-primary"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0 bg-secondary rounded-3">
+            <div class="col-md-4 text-dark fw-semibold ps-4 pe-2 py-4">Get custom integrations</div>
+            <div class="col-md-8 text-center">
+              <div class="row row-cols-3 g-0">
+                <div class="col px-2 py-4">
+                  <i class="bx bx-x lead text-muted"></i>
+                </div>
+                <div class="col position-relative bg-primary px-2 py-4">
+                  <i class="bx bx-check lead text-light"></i>
+                  <span class="position-absolute start-0 top-100 w-100 bg-primary rounded-3 rounded-top-0" style="height: 2rem;"></span>
+                </div>
+                <div class="col px-2 py-4">
+                  <i class="bx bx-check lead text-primary"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- FAQ -->
+      <section class="bg-secondary py-5">
+        <div class="container my-2 py-md-2 py-lg-5">
+          <div class="row">
+            <div class="col-xl-4 col-md-5 text-center text-md-start pb-2 pb-md-0 mb-4 mb-md-0">
+              <h2 class="pb-3 mb-1 mb-lg-2">Any questions? <br class="d-none d-md-inline">Check out the FAQs</h2>
+              <p class="fs-lg pb-3 mb-2 mb-lg-3">Still have unanswered questions and need to get in touch?</p>
+              <a href="contact.html" class="btn btn-primary">Contact support</a>
+            </div>
+            <div class="col-md-7 offset-xl-1">
+              <div class="accordion" id="faq">
+                <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                  <h2 class="accordion-header" id="q1-heading">
+                    <button class="accordion-button shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                      What if I exceed my Free or paid plan limits?
+                    </button>
+                  </h2>
+                  <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1-heading" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm pt-0">
+                      <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+                      <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                  <h2 class="accordion-header" id="q2-heading">
+                    <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                      How do I know which plan is right for me?
+                    </button>
+                  </h2>
+                  <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2-heading" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm pt-0">
+                      <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+                      <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                  <h2 class="accordion-header" id="q3-heading">
+                    <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                      Are there any long-term commitments or cancellation fees?
+                    </button>
+                  </h2>
+                  <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3-heading" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm pt-0">
+                      <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+                      <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                  <h2 class="accordion-header" id="q4-heading">
+                    <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                      How do I cancel my monthly subscription?
+                    </button>
+                  </h2>
+                  <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4-heading" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm pt-0">
+                      <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+                      <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                  <h2 class="accordion-header" id="q5-heading">
+                    <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                      What happens if I upgrade or downgrade a plan mid-period?
+                    </button>
+                  </h2>
+                  <div id="q5" class="accordion-collapse collapse" aria-labelledby="q5-heading" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm pt-0">
+                      <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+                      <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item border-0 rounded-3 shadow-sm">
+                  <h2 class="accordion-header" id="q6-heading">
+                    <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                      What kind of support do I get?
+                    </button>
+                  </h2>
+                  <div id="q6" class="accordion-collapse collapse" aria-labelledby="q6-heading" data-bs-parent="#faq">
+                    <div class="accordion-body fs-sm pt-0">
+                      <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+                      <p class="mb-0">Ornare senectus fusce dignissim ut. Integer consequat in eu tortor, faucibus et lacinia posuere. Turpis sit viverra lorem suspendisse lacus aliquam auctor vulputate. Quis egestas aliquam nunc purus lacus, elit leo elit facilisi. Dignissim amet adipiscing massa integer.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+      <div class="container pt-2 pt-sm-4">
+        <div class="row">
+          <div class="col-md-6 col-lg-5 col-xl-4 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img src="assets/img/fm_logo.png" width="150" alt="Silicon">
+            </div>
+            <p class="text-body mb-0">Exclusive Matrimony services for Indian Brides and Grooms Around the World, Friendsmatrimony.com is a Great Place to find your Life Partner.</p>
+          </div>
+          <div class="col-md-6 col-xxl-5 offset-lg-1 offset-xl-2 offset-xxl-3">
+            <div class="row row-cols-1 row-cols-sm-2">
+              <div class="col pb-2 pb-sm-0 mb-4 mb-sm-0">
+                <h3 class="h5 pb-1 pb-sm-2 pb-lg-3">Contact us</h3>
+                <ul class="nav flex-column mb-3">
+                  <li>
+                    All Countries
+                    <a href="tel:+16477091536" class="nav-link fs-lg fw-normal px-0 py-1">
+                      <i class="bx bx-phone-call fs-4 me-2"></i>
+                      +1 647 709 1536
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:email@example.com" class="nav-link fs-lg fw-normal px-0 py-1">
+                      <i class="bx bx-envelope fs-4 me-2"></i>
+                      info@friendsmatrimony.com
+                    </a>
+                  </li>
+                </ul>
+                <div class="d-flex pt-2 pt-sm-3 pt-md-4">
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" aria-label="Facebook">
+                    <i class="bx bxl-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle me-3" aria-label="LinkedIn">
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-telegram rounded-circle me-3" aria-label="Telegram">
+                    <i class="bx bxl-telegram"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-youtube rounded-circle me-3" aria-label="YouTube">
+                    <i class="bx bxl-youtube"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col ps-sm-4 ps-md-5">
+                <div>
+                  Srilanka
+                  <a href="tel:+940112363663" class="nav-link fs-lg fw-normal px-0 py-1">
+                    <i class="bx bx-phone-call fs-4 me-2"></i>
+                    +94 011 236 3663
+                  </a>
+                </div>
+                <div>
+                  Malaysia
+                  <a href="tel:+600392121466" class="nav-link fs-lg fw-normal px-0 py-1">
+                    <i class="bx bx-phone-call fs-4 me-2"></i>
+                    +60 039 212 1466
+                  </a>
+                </div>
+                <div>
+                  India
+                  <a href="tel:+919344935899" class="nav-link fs-lg fw-normal px-0 py-1">
+                    <i class="bx bx-phone-call fs-4 me-2"></i>
+                    +91 934 493 5899
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="nav d-block fs-sm pt-5 mb-0">
+          <span class="opacity-60">&copy; All rights reserved. Made by </span>
+          <a class="nav-link d-inline-block p-0" href="https://createx.studio/" target="_blank" rel="noopener">iSoft Friends</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>

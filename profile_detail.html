@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Friends Matrimony</title>
+
+    <meta name="description" content="Exclusive Matrimony services for Indian Brides and Grooms Around the World, Friendsmatrimony.com is a Great Place to find your Life Partner.">
+    <meta name="keywords" content="Friends Matrimony Friendsmatrimony.ca Friendsmatrimony.com exclusive matrimony portal Sri Lankans matrimony services life partner perfect match love register home login search create profiles.">
+    <meta name="author" content="isoftfriends">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <main class="page-wrapper">
+
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/fm_logo.png" width="110" alt="Silicon">
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="profile.html" class="nav-link">Profiles</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="profile.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Search</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="profile.html" class="dropdown-item">Simple Search</a></li>
+                    <li><a href="profile.html" class="dropdown-item">Advance Search</a></li>
+                    <li><a href="profile.html" class="dropdown-item">Keyword Search</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="pricing.html" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="signin.html" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="bx bx-user fs-4 lh-1 me-1"></i>
+                &nbsp;Login
+              </a>
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="signin.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+            <i class="bx bx-user fs-5 lh-1 me-1"></i>
+            &nbsp;Login
+          </a>
+        </div>
+      </header>
+
+
+      <!-- Breadcrumb -->
+      <nav class="container pt-4 mt-lg-3" aria-label="breadcrumb">
+        <div style="height: 80px;"></div>
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="pricing.html">Profile</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Profile Details</li>
+        </ol>
+      </nav>
+
+
+      <!-- Post title + Meta  -->
+      <section class="container mt-4 mb-5 pt-2 pb-lg-5">
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <div class="profile-gallery">
+              <div class="profile-gallery-preview order-sm-2">
+                <div class="profile-gallery-preview-item active" id="first">
+                  <img src="assets/img/blog/podcasts/06.jpg" alt="Product image">
+                </div>
+                <div class="profile-gallery-preview-item" id="second">
+                  <img src="assets/img/blog/podcasts/05.jpg" alt="Product image">
+                </div>
+                <div class="profile-gallery-preview-item" id="third">
+                  <img src="assets/img/blog/podcasts/03.jpg" alt="Product image">
+                </div>
+                <div class="profile-gallery-preview-item" id="fourth">
+                  <img src="assets/img/blog/podcasts/02.jpg" alt="Product image">
+                </div>
+              </div>
+              <div class="profile-gallery-thumblist order-sm-1">
+                <a class="profile-gallery-thumblist-item active" href="#first">
+                  <img src="assets/img/blog/podcasts/06.jpg" alt="Product thumb">
+                </a>
+                <a class="profile-gallery-thumblist-item" href="#second">
+                  <img src="assets/img/blog/podcasts/05.jpg" alt="Product thumb">
+                </a>
+                <a class="profile-gallery-thumblist-item" href="#third">
+                  <img src="assets/img/blog/podcasts/04.jpg" alt="Product thumb">
+                </a>
+                <a class="profile-gallery-thumblist-item" href="#fourth">
+                  <img src="assets/img/blog/podcasts/03.jpg" alt="Product thumb">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="ms-xl-5 ms-lg-4 ps-xxl-34">
+              <h3 class="h6 mb-2">
+                <svg class="me-2 mt-n1" xmlns="http://www.w3.org/2000/svg" width="24" height="25" fill="none"><path d="M20 12.5003v-1.707c0-4.44199-3.479-8.16099-7.755-8.28999-2.204-.051-4.251.736-5.816 2.256S4 8.31831 4 10.5003v2c-1.103 0-2 .897-2 2v4c0 1.103.897 2 2 2h2v-10c0-1.63699.646-3.16599 1.821-4.30599s2.735-1.739 4.363-1.691c3.208.096 5.816 2.918 5.816 6.28999v9.707h2c1.103 0 2-.897 2-2v-4c0-1.103-.897-2-2-2z" fill="url(#A)"/><path d="M7 12.5003h2v8H7v-8zm8 0h2v8h-2v-8z" fill="url(#A)"/><defs><linearGradient id="A" x1="2" y1="11.5437" x2="22" y2="11.5437" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient></defs></svg>
+                Podcast
+              </h3>
+              <h3 class="display-6">Sharmini (FMID120429)</h3>
+              <div class="d-flex align-items-center flex-wrap text-muted mb-4">
+                <div class="fs-xs border-end pe-3 me-3 mb-2">
+                  <span class="badge text-bg-success text-light fs-base">Platinum Member</span>
+                </div>
+                <div class="fs-sm pe-3 me-3 mb-2">Online: a minute ago</div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>Created by:<span class="text-dark fw-semibold ms-2">Sister</span></li>
+                    <li>Age:<span class="text-dark fw-semibold ms-2">24yrs</span></li>
+                    <li>Religion:<span class="text-dark fw-semibold ms-2">Hindu</span></li>
+                    <li>Star:<span class="text-dark fw-semibold ms-2">Revathi</span></li>
+                    <li>Sevvai:<span class="text-dark fw-semibold ms-2">10</span></li>
+                    <li>Current Location:<span class="text-dark fw-semibold ms-2">Sri Lanka</span></li>
+                    <li>Language:<span class="text-dark fw-semibold ms-2">Tamil</span></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>Marital status:<span class="text-dark fw-semibold ms-2">Single</span></li>
+                    <li>Height:<span class="text-dark fw-semibold ms-2">5'2" or 157cm</span></li>
+                    <li>Caste:<span class="text-dark fw-semibold ms-2">Vellalar</span></li>
+                    <li>Raasi:<span class="text-dark fw-semibold ms-2">Meenam</span></li>
+                    <li>Paavam:<span class="text-dark fw-semibold ms-2">Not Specified</span></li>
+                    <li>Residential Status:<span class="text-dark fw-semibold ms-2">Work Permit</span></li>
+                    <li>Educational Level:<span class="text-dark fw-semibold ms-2">High School</span></li>
+                  </ul>
+                </div>
+              </div>
+              <hr class="my-4">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                  <a href="#" class="btn btn-primary"><i class='bx bx-mail-send me-2'></i> Send Message</a>
+                </div>
+                <div class="d-flex align-items-center text-muted">
+                  <button type="button" class="btn btn-info"><i class='bx bx-heart me-2'></i> Express Interest</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Post content -->
+      <section class="container mb-5 pb-lg-5">
+        <div class="row gy-md-5 gy-4">
+
+          <!-- Author -->
+          <div class="col-md-3 order-md-2 position-relative">
+            <div class="sticky-top ms-xxl-5 ps-lg-4"  style="top: 105px !important;">
+              <div class="d-flex align-items-center position-relative mb-2">
+                <img src="assets/img/avatar/06.jpg" class="rounded-circle me-3" width="60" alt="Avatar">
+                <div>
+                  <h4 class="h6 mb-1">Manager</h4>
+                  <a href="#" class="fw-semibold stretched-link">Hasvini</a>
+                </div>
+              </div>
+              <div>
+                <ul class="list-unstyled mb-0">
+                  <li>Contact Number:<span class="text-dark fw-semibold ms-2">4164772259 Ext:201</span></li>
+                  <li>Working Hour (Asia/Colombo):<span class="text-dark fw-semibold ms-2">3:00 PM - 12:00 AM</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Player + Timeline -->
+          <div class="col-md-9 order-md-1">
+            <div class="card p-lg-4 p-md-2 mb-4 mb-lg-5">
+
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                  <a href="#" class="btn btn-outline-secondary"><i class='bx bx-file me-2'></i> View Horoscope</a>
+                </div>
+                <div class="d-flex align-items-center text-muted">
+                  <button type="button" class="btn btn-outline-secondary"><i class='bx bx-mobile-alt me-2'></i> Contact Details</button>
+                </div>
+                <div class="d-flex align-items-center text-muted">
+                  <button type="button" class="btn btn-outline-secondary"><i class='bx bx-bookmark-heart me-2'></i> Add to shortlists</button>
+                </div>
+                <div class="d-flex align-items-center text-muted">
+                  <button type="button" class="btn btn-outline-secondary"><i class='bx bx-notepad me-2'></i> Personal Notes</button>
+                </div>
+              </div>
+            
+            </div>
+            <h3 class="h4 mb-4 pt-2 pt-md-0">Timeline</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex mb-2">
+                <span class="flex-shrink-0 fw-medium text-nowrap me-2" style="width: 80px;">00:05:12</span>
+                Diam erat molestie duis auctor sit quis.
+              </li>
+              <li class="d-flex mb-2">
+                <span class="flex-shrink-0 fw-medium text-nowrap me-2 text-primary" style="width: 80px;">00:28:19</span>
+                Non mi eget molestie pretium commodo urna duis facilisis turpis.
+              </li>
+              <li class="d-flex mb-2">
+                <span class="flex-shrink-0 fw-medium text-nowrap me-2" style="width: 80px;">00:45:37</span>
+                Sit placerat adipiscing interdum libero neque, aliquam nec imperdiet ullamcorper.
+              </li>
+              <li class="d-flex mb-2">
+                <span class="flex-shrink-0 fw-medium text-nowrap me-2" style="width: 80px;">00:56:04</span>
+                Pulvinar eu porttitor nulla morbi varius tristique leo.
+              </li>
+              <li class="d-flex mb-2">
+                <span class="flex-shrink-0 fw-medium text-nowrap me-2" style="width: 80px;">01:32:17</span>
+                Cras et gravida iaculis vel at quis euismod.
+              </li>
+              <li class="d-flex mb-2">
+                <span class="flex-shrink-0 fw-medium text-nowrap me-2" style="width: 80px;">01:50:43</span>
+                Volutpat malesuada nulla lectus justo tempus est sollicitudin.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Details -->
+      <section class="container mb-4 pb-2 mb-md-5 pb-lg-5">
+        <div class="row gy-5">
+
+          <div class="col-lg-9">
+            <div class="card p-md-5 p-4 border-0 bg-secondary">
+              <div class="card-body w-100 mx-auto px-0" style="max-width: 746px;">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 position-relative">
+            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 70px !important;">
+              <div class="row gy-lg-5 gy-4 justify-content-center text-lg-start text-center">
+
+                <div class="card border-0 bg-faded-primary bg-repeat-0 bg-size-cover" style="min-height: 25rem; background-image: url(assets/img/blog/banner.png);">
+                  <div class="card-body">
+                    <h5 class="h3 mb-4 pb-2 text-center">Ad Banner</h5>
+                  </div>
+                </div>
+
+                <div class="card border-0 bg-faded-primary bg-repeat-0 bg-size-cover" style="min-height: 25rem; background-image: url(assets/img/blog/banner.png);">
+                  <div class="card-body">
+                    <h5 class="h3 mb-4 pb-2 text-center">Ad Banner</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Recent Matches -->
+      <section class="container">
+        <div class="pb-5">
+          <div>
+
+            <!-- Title + prev/next buttons -->
+            <div class="d-flex align-items-center justify-content-between pb-4 mb-3">
+              <h2 class="h1 mb-0 me-3">Recent Matches</h2>
+              <div class="d-flex">
+                <button type="button" id="popular-prev" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Previous">
+                  <i class="bx bx-chevron-left"></i>
+                </button>
+                <button type="button" id="popular-next" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Next">
+                  <i class="bx bx-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Courses slider -->
+            <div class="swiper swiper-nav-onhover mx-n2" data-swiper-options='{
+              "slidesPerView": 2,
+              "spaceBetween": 8,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              },
+              "navigation": {
+                "prevEl": "#popular-prev",
+                "nextEl": "#popular-next"
+              },
+              "breakpoints": {
+                "560": {
+                  "slidesPerView": 2
+                },
+                "768": {
+                  "slidesPerView": 3
+                },
+                "850": {
+                  "slidesPerView": 5
+                },
+                "1200": {
+                  "slidesPerView": 5
+                }
+              }
+            }'>
+              <div class="swiper-wrapper">
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/24.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="profile_detail.html" class="btn btn-sm btn-info me-2">
+                            View Profile
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/16.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="profile_detail.html" class="btn btn-sm btn-info me-2">
+                            View Profile
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/18.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="profile_detail.html" class="btn btn-sm btn-info me-2">
+                            View Profile
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/14.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="profile_detail.html" class="btn btn-sm btn-info me-2">
+                            View Profile
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/10.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="profile_detail.html" class="btn btn-sm btn-info me-2">
+                            View Profile
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/18.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="profile_detail.html" class="btn btn-sm btn-info me-2">
+                            View Profile
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/21.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="profile_detail.html" class="btn btn-sm btn-info me-2">
+                            View Profile
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/22.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="profile_detail.html" class="btn btn-sm btn-info me-2">
+                            View Profile
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination (bullets) -->
+              <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+            </div>
+            <a href="portfolio-courses.html" class="btn btn-outline-primary btn-md w-100 d-md-none mt-3">
+              See all profiles
+              <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+      <div class="container pt-2 pt-sm-4">
+        <div class="row">
+          <div class="col-md-6 col-lg-5 col-xl-4 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img src="assets/img/fm_logo.png" width="150" alt="Silicon">
+            </div>
+            <p class="text-body mb-0">Exclusive Matrimony services for Indian Brides and Grooms Around the World, Friendsmatrimony.com is a Great Place to find your Life Partner.</p>
+          </div>
+          <div class="col-md-6 col-xxl-5 offset-lg-1 offset-xl-2 offset-xxl-3">
+            <div class="row row-cols-1 row-cols-sm-2">
+              <div class="col pb-2 pb-sm-0 mb-4 mb-sm-0">
+                <h3 class="h5 pb-1 pb-sm-2 pb-lg-3">Contact us</h3>
+                <ul class="nav flex-column mb-3">
+                  <li>
+                    All Countries
+                    <a href="tel:+16477091536" class="nav-link fs-lg fw-normal px-0 py-1">
+                      <i class="bx bx-phone-call fs-4 me-2"></i>
+                      +1 647 709 1536
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:email@example.com" class="nav-link fs-lg fw-normal px-0 py-1">
+                      <i class="bx bx-envelope fs-4 me-2"></i>
+                      info@friendsmatrimony.com
+                    </a>
+                  </li>
+                </ul>
+                <div class="d-flex pt-2 pt-sm-3 pt-md-4">
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" aria-label="Facebook">
+                    <i class="bx bxl-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle me-3" aria-label="LinkedIn">
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-telegram rounded-circle me-3" aria-label="Telegram">
+                    <i class="bx bxl-telegram"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-youtube rounded-circle me-3" aria-label="YouTube">
+                    <i class="bx bxl-youtube"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col ps-sm-4 ps-md-5">
+                <div>
+                  Srilanka
+                  <a href="tel:+940112363663" class="nav-link fs-lg fw-normal px-0 py-1">
+                    <i class="bx bx-phone-call fs-4 me-2"></i>
+                    +94 011 236 3663
+                  </a>
+                </div>
+                <div>
+                  Malaysia
+                  <a href="tel:+600392121466" class="nav-link fs-lg fw-normal px-0 py-1">
+                    <i class="bx bx-phone-call fs-4 me-2"></i>
+                    +60 039 212 1466
+                  </a>
+                </div>
+                <div>
+                  India
+                  <a href="tel:+919344935899" class="nav-link fs-lg fw-normal px-0 py-1">
+                    <i class="bx bx-phone-call fs-4 me-2"></i>
+                    +91 934 493 5899
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="nav d-block fs-sm pt-5 mb-0">
+          <span class="opacity-60">&copy; All rights reserved. Made by </span>
+          <a class="nav-link d-inline-block p-0" href="https://createx.studio/" target="_blank" rel="noopener">iSoft Friends</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
