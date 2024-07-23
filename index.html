@@ -1,118 +1,1090 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en" data-bs-theme="light">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Friends Matrimony</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="My personal github page">
-    <meta name="author" content="Thusatharan">
+    <meta name="description" content="Exclusive Matrimony services for Indian Brides and Grooms Around the World, Friendsmatrimony.com is a Great Place to find your Life Partner.">
+    <meta name="keywords" content="Friends Matrimony Friendsmatrimony.ca Friendsmatrimony.com exclusive matrimony portal Sri Lankans matrimony services life partner perfect match love register home login search create profiles.">
+    <meta name="author" content="isoftfriends">
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-    <meta property="" content="" /> <!-- website name -->
-    <meta property="" content="" /> <!-- website link -->
-    <meta property="" content="" /> <!-- title shown in the actual shared post -->
-    <meta property="" content="" /> <!-- description shown in the actual shared post -->
-    <meta property="" content="" /> <!-- image link, make sure it's jpg -->
-    <meta property="" content="" /> <!-- where do you want your post to link to -->
-    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Webpage Title -->
-    <title>Petals Webpage Title</title>
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
 
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/custom_style.css" rel="stylesheet">
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
-    <!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
-</head>
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
 
-<body>
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
 
-    <!-- Header -->
-    <header id="header" class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <div class="countdown">
-                            <span id="clock"></span>
-                        </div> <!-- end of countdown -->
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
 
-                        <h1 class="heading">Website Coming Soon</h1>
-                        <p class="p-large">My website is under development, I will meet you soon, Keep an eye on the
-                            countdown, <br> For more details contact me.
-                        </p>
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
 
-                        <!-- Sign Up Form -->
-                        <form id="signUpForm">
-                            <div class="form-group">
-                                <div class="form-control-input" id="semail">
-                                    thusatharan27@gmail.com </div>
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <main class="page-wrapper">
+
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/fm_logo.png" width="110" alt="Silicon">
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Search</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">Simple Search</a></li>
+                    <li><a href="#" class="dropdown-item">Advance Search</a></li>
+                    <li><a href="#" class="dropdown-item">Keyword Search</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="#" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="bx bx-user fs-4 lh-1 me-1"></i>
+                &nbsp;Login
+              </a>
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="#" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+            <i class="bx bx-user fs-5 lh-1 me-1"></i>
+            &nbsp;Login
+          </a>
+        </div>
+      </header>
+
+
+      <!-- Hero section -->
+      <section class="position-relative pt-5 overflow-hidden">
+        <span class="position-absolute top-0 start-0 d-dark-mode-none d-block w-100 h-100 bg-secondary"></span>
+        <span class="position-absolute top-0 start-0 d-dark-mode-block d-none w-100 h-100" style="background: radial-gradient(84.79% 172.9% at 73.31% 31.4%, rgba(99, 135, 241, .1) 0%, rgba(218, 70, 239, .05) 52.47%, rgba(99, 135, 241, .1) 100%);">
+          <span class="d-block w-100 h-100 bg-position-center bg-size-cover bg-repeat-0" style="background-image: url(assets/img/landing/saas-4/hero-bg.png);"></span>
+        </span>
+        <div class="container position-relative my-5 py-xl-5 py-md-3 zindex-5">
+          <div class="row justify-content-md-start justify-content-center flex-md-nowrap py-lg-5 py-4">
+            <div class="col-md-6 mb-md-5 mb-md-4 mb-3 pb-xl-5 pb-lg-4">
+              <h1 class="display-3 pb-2 pb-sm-3">Bringing You Closer to Your True Love</h1>
+              <p class="text-body fs-lg d-md-none d-xl-block pb-2 pb-md-0 mb-4 mb-md-5">Exclusive Matrimony services for Indian Brides and Grooms Around the World, Friendsmatrimony.com is a Great Place to find your Life Partner.</p>
+              <div class="d-flex justify-content-center justify-content-md-start pb-2 pt-lg-2 pt-xl-0">
+                <a href="#" class="btn btn-lg btn-primary shadow-primary me-3 me-sm-4">Register now</a>
+                <a href="#" class="btn btn-lg btn-outline-secondary">Contact us</a>
+              </div>
+              <div class="d-flex align-items-center justify-content-center justify-content-md-start text-start pt-4 pt-lg-5 mt-xxl-5">
+                <div class="d-flex me-3">
+                  <div class="d-flex align-items-center justify-content-center bg-light rounded-circle" style="width: 52px; height: 52px;">
+                    <img src="assets/img/avatar/14.jpg" class="rounded-circle" width="48" alt="Avatar">
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center bg-light rounded-circle ms-n3" style="width: 52px; height: 52px;">
+                    <img src="assets/img/avatar/08.jpg" class="rounded-circle" width="48" alt="Avatar">
+                  </div>
+                  <div class="d-flex align-items-center justify-content-center bg-light rounded-circle ms-n3" style="width: 52px; height: 52px;">
+                    <img src="assets/img/avatar/15.jpg" class="rounded-circle" width="48" alt="Avatar">
+                  </div>
+                </div>
+                <div><strong>5000+</strong> users already with us</div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="card border-light shadow-lg p-3 my-5 my-sm-0">
+                <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
+                <div class="card-body position-relative zindex-2">
+                  <h3 class="card-title pb-3 mb-4">Find your soul mate</h3>
+                  <form class="row g-4 needs-validation">
+                    <div class="col-sm-6">
+                      <label for="fn" class="form-label fs-base">Gender</label>
+                      <div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="option1">
+                          <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="option2">
+                          <label class="form-check-label" for="female">Female</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="fn" class="form-label fs-base">Show Profiles</label>
+                      <div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="with_photo" value="option1">
+                          <label class="form-check-label" for="with_photo">With Photo</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="email" class="form-label fs-base">Age</label>
+                      <div class="input-group input-group-md">
+                        <select class="form-select form-select-md" id="specialist" required>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                        </select>
+                        <span class="input-group-text">To</span>
+                        <select class="form-select form-select-md" id="specialist" required>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="date" class="form-label fs-base">Birth Country</label>
+                      <select class="form-select form-select-md" id="specialist" required>
+                        <option value="" selected disabled>Choose a specialist</option>
+                        <option value="Therapist">Therapist</option>
+                        <option value="Dentist">Dentist</option>
+                        <option value="Cardiologist">Cardiologist</option>
+                        <option value="Pediatrician">Pediatrician</option>
+                        <option value="Gynecologist">Gynecologist</option>
+                        <option value="Surgeon">Surgeon</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="time" class="form-label fs-base">Language</label>
+                      <select class="form-select form-select-md" id="specialist" required>
+                        <option value="" selected disabled>Choose a specialist</option>
+                        <option value="Therapist">Therapist</option>
+                        <option value="Dentist">Dentist</option>
+                        <option value="Cardiologist">Cardiologist</option>
+                        <option value="Pediatrician">Pediatrician</option>
+                        <option value="Gynecologist">Gynecologist</option>
+                        <option value="Surgeon">Surgeon</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="date" class="form-label fs-base">Location</label>
+                      <select class="form-select form-select-md" id="specialist" required>
+                        <option value="" selected disabled>Choose a specialist</option>
+                        <option value="Therapist">Therapist</option>
+                        <option value="Dentist">Dentist</option>
+                        <option value="Cardiologist">Cardiologist</option>
+                        <option value="Pediatrician">Pediatrician</option>
+                        <option value="Gynecologist">Gynecologist</option>
+                        <option value="Surgeon">Surgeon</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="time" class="form-label fs-base">Marital status</label>
+                      <select class="form-select form-select-md" id="specialist" required>
+                        <option value="" selected disabled>Choose a specialist</option>
+                        <option value="Therapist">Therapist</option>
+                        <option value="Dentist">Dentist</option>
+                        <option value="Cardiologist">Cardiologist</option>
+                        <option value="Pediatrician">Pediatrician</option>
+                        <option value="Gynecologist">Gynecologist</option>
+                        <option value="Surgeon">Surgeon</option>
+                      </select>
+                    </div>
+                    <div class="col-12 pt-2 pt-sm-3">
+                      <button type="submit" class="btn btn-md btn-primary w-100 w-sm-auto">Search Profiles</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="position-absolute bottom-0 start-0 w-100">
+          <span class="d-dark-mode-none d-block w-100 h-100 py-xl-5 pt-lg-4 pt-md-0 pt-4 pb-5 bg-light"></span>
+          <span class="d-dark-mode-block d-none w-100 h-100 py-xl-5 pt-lg-4 pt-md-0 pt-4 pb-5 bg-dark"></span>
+        </span>
+      </section>
+
+      
+      <!-- Newest Members -->
+      <section class="container">
+        <div class="pb-5">
+          <div>
+
+            <!-- Title + prev/next buttons -->
+            <div class="d-flex align-items-center justify-content-between pb-4 mb-3">
+              <h2 class="h1 mb-0 me-3">Newest Members</h2>
+              <div class="d-flex">
+                <button type="button" id="popular-prev" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Previous">
+                  <i class="bx bx-chevron-left"></i>
+                </button>
+                <button type="button" id="popular-next" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Next">
+                  <i class="bx bx-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Courses slider -->
+            <div class="swiper swiper-nav-onhover mx-n2" data-swiper-options='{
+              "slidesPerView": 2,
+              "spaceBetween": 8,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "clickable": true
+              },
+              "navigation": {
+                "prevEl": "#popular-prev",
+                "nextEl": "#popular-next"
+              },
+              "breakpoints": {
+                "560": {
+                  "slidesPerView": 2
+                },
+                "768": {
+                  "slidesPerView": 3
+                },
+                "850": {
+                  "slidesPerView": 5
+                },
+                "1200": {
+                  "slidesPerView": 5
+                }
+              }
+            }'>
+              <div class="swiper-wrapper">
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/24.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                            <i class="bx bxl-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/16.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                            <i class="bx bxl-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/18.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                            <i class="bx bxl-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/25.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                            <i class="bx bxl-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/29.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                            <i class="bx bxl-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/18.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                            <i class="bx bxl-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/21.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                            <i class="bx bxl-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide h-auto pb-3">
+                  <div class="card card-hover border-0 bg-transparent">
+                    <div class="position-relative">
+                      <img src="assets/img/team/30.jpg" class="rounded-3" alt="Ralph Edwards">
+                      <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                        <div class="position-relative d-flex zindex-2">
+                          <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin"></i>
+                          </a>
+                          <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                            <i class="bx bxl-twitter"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body text-center p-3">
+                      <h3 class="fs-lg fw-semibold pt-1 mb-2">Ralph Edwards</h3>
+                      <p class="fs-sm mb-0">Founder &amp; CEO, Uber</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination (bullets) -->
+              <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+            </div>
+            <a href="portfolio-courses.html" class="btn btn-outline-primary btn-md w-100 d-md-none mt-3">
+              See all profiles
+              <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+              <!-- Features -->
+      <section class="position-relative zindex-2 px-3 mt-n2 mt-sm-0">
+                <div class="card border-0 rounded-3 shadow py-5 px-3 px-lg-0 mx-auto" style="max-width: 1560px;">
+                  <div class="container py-lg-4 py-xl-5">
+                    <div class="row pt-md-3 pb-md-2">
+                      <div class="col-lg-5 d-flex flex-column text-center text-lg-start mb-3 mb-sm-4 mb-lg-0">
+                        <h2 class="h1">Our services aim to  
+                          <span class="text-primary">bring you closer to your future life partner,</span> no matter where they are..</h2>
+                        <p class="fs-lg mt-auto">*Serviced by <span class="fw-semibold">Friends Matrimony</span></p>
+                      </div>
+                      <div class="col-lg-7 col-xl-6 offset-xl-1">
+                        <div class="row g-4 g-xl-5">
+                          <div class="col-sm-6">
+                            <div class="text-center text-sm-start pe-md-2">
+                              <img src="assets/img/landing/app-showcase-3/features/payment.svg" style="filter: drop-shadow(0px 0.8645132780075073px 4.602016925811768px rgba(99, 102, 241, 0.02)) drop-shadow(0px 2.9037201404571533px 10.33138370513916px rgba(99, 102, 241, 0.05)) drop-shadow(0px 13px 27px rgba(99, 102, 241, 0.17));" alt="Payment icon">
+                              <h3 class="h4 mt-4 mb-2">Easy payments</h3>
+                              <p class="mb-2">Users can easily make payments through the mobile app using various payment methods.</p>
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">CONTACT</button>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="text-center text-sm-start pe-md-2">
+                              <img src="assets/img/landing/app-showcase-3/features/security.svg" style="filter: drop-shadow(0px 0.8645132780075073px 4.602016925811768px rgba(99, 102, 241, 0.02)) drop-shadow(0px 2.9037201404571533px 10.33138370513916px rgba(99, 102, 241, 0.05)) drop-shadow(0px 13px 27px rgba(99, 102, 241, 0.17));" alt="Security icon">
+                              <h3 class="h4 mt-4 mb-2">Data security</h3>
+                              <p class="mb-2">The app employs various security measures to protect user data from unauthorized access or theft.</p>
                             </div>
-                        </form>
-                        <!-- end of sign up form -->
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="text-center text-sm-start pe-md-2">
+                              <img src="assets/img/landing/app-showcase-3/features/statistics.svg" style="filter: drop-shadow(0px 0.8645132780075073px 4.602016925811768px rgba(99, 102, 241, 0.02)) drop-shadow(0px 2.9037201404571533px 10.33138370513916px rgba(99, 102, 241, 0.05)) drop-shadow(0px 13px 27px rgba(99, 102, 241, 0.17));" alt="Statistics icon">
+                              <h3 class="h4 mt-4 mb-2">Cost statistics</h3>
+                              <p class="mb-2">Users can track their spending and view detailed cost statistics, such as expenses by category, time period...</p>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="text-center text-sm-start pe-md-2">
+                              <img src="assets/img/landing/app-showcase-3/features/support.svg" style="filter: drop-shadow(0px 0.8645132780075073px 4.602016925811768px rgba(99, 102, 241, 0.02)) drop-shadow(0px 2.9037201404571533px 10.33138370513916px rgba(99, 102, 241, 0.04)) drop-shadow(0px 13px 27px rgba(99, 102, 241, 0.17));" alt="Statistics icon">
+                              <h3 class="h4 mt-4 mb-2">Support 24/7</h3>
+                              <p class="mb-2">Users can get help or support from the app's customer service team at any time of day or night.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      </section>
 
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
+      <!-- Video -->
+      <section class="position-relative py-5">
+        <span class="position-absolute top-0 start-0 w-100 h-100 d-dark-mode-none" style="background: linear-gradient(360deg, #fff 5.39%, #f3f6ff 78.66%);"></span>
+        <span class="position-absolute top-0 start-0 w-100 h-100 d-none d-dark-mode-block" style="background: linear-gradient(360deg, #0b0f19 5.39%, rgba(255, 255, 255, .04) 78.66%);"></span>
+        <div class="container position-relative zindex-2 py-2 py-sm-3 py-sm-4 py-md-5">
+          <div class="row align-items-center py-lg-2 py-xl-3 my-xl-1 my-xxl-3">
+            <div class="col-md-5 col-xl-4">
+              <h2 class="h1 pb-2 pb-sm-3 mb-md-0">Learn <span class="text-gradient-primary">how Friends Matrimony works.</span> Watch a short introductory video</h2>
+            </div>
+            <div class="col-md-7 offset-xl-1">
+              <div class="position-relative">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center zindex-5">
+                  <!-- Embed YouTube video -->
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/toB3OuYgEaw?controls=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-100 h-100 rounded-3"></iframe>
+                </div>
+                <img src="assets/img/landing/saas-5/video-cover-light.jpg" class="d-dark-mode-none rounded-3" alt="Video cover">
+                <img src="assets/img/landing/saas-5/video-cover-dark.png" class="d-none d-dark-mode-block rounded-3" alt="Video cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Social Links -->
-        <div class="social-container">
+            <!-- Map -->
+      <section class="bg-dark py-5" data-bs-theme="dark">
+              <div class="container pt-2 py-sm-3 py-md-4 py-lg-5 my-xxl-3">
+                <div class="row pt-lg-2 pt-xl-3">
+                  <div class="col-md-6">
+                    <h2 class="h1 pe-xxl-5 me-xl-4 mb-md-0">We have <span class="text-warning">over 5,000 verified profiles</span> from across the globe.</h2>
+                  </div>
+                  <div class="col-md-6 col-xl-5 offset-xl-1">
+                    <p class="text-body fs-xl mb-0">Our matrimony services are designed with the simple objective of bridging the distance between you and your future life partner, wherever he or she may be. With over 5000 verified profiles from all over the world, we strive to connect you with the person who is perfect for you.</p>
+                  </div>
+                </div>
+                <div class="pt-5 mt-sm-2 mt-md-3 mt-lg-4 mt-xl-5">
+                  <img src="assets/img/landing/saas-5/map.png" alt="Map">
+                </div>
+              </div>
+      </section>
 
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <a class="logo-text" href="index.html">Petals</a> -->
 
-            <!-- Image Logo -->
-            <!-- <a href="index.html"><img class="logo-image" src="images/logo.svg" alt="alternative"></a>  -->
+      <!-- Feature section (App) -->
+      <section class="container py-md-3 py-lg-5">
+        <div class="row align-items-center mb-xl-5 mb-4">
+
+          <!-- Text -->
+          <div class="col-md-6 col-xl-5 text-center text-md-start mb-5 mb-md-0">
+            <h2 class="h1 pb-2 pb-lg-3">Find your soulmate with Friends Matrimony</h2>
+            <p class="pb-2 mb-4 mb-lg-5">In blandit luctus proin mauris a commodo, dolor diam tempus, aenean magna fusce eu. Id porttitor aliquam eget aliquet sagittis eu aut diam ut phasellus sed convallis iaculis neque ultricies convallis sed enim.</p>
+            <hr>
+            <div class="d-flex justify-content-center justify-content-md-between pt-4 pt-lg-5">
+              <div class="mx-3 mx-md-0">
+                <div class="display-3 text-dark mb-1">5000+</div>
+                <span>Profiles</span>
+              </div>
+              <div class="mx-3 mx-md-0">
+                <div class="display-3 text-dark mb-1">100%</div>
+                <span>Verified Numbers</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parallax gfx -->
+          <div class="col-md-6 offset-xl-1">
+            <div class="parallax ratio ratio-1x1 mx-auto" style="max-width: 550px;">
+              <div class="parallax-layer position-absolute zindex-2" data-depth="-0.15">
+                <img src="assets/img/landing/saas-4/avatars.png" alt="Avatar">
+              </div>
+              <div class="parallax-layer d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" data-depth="0.1">
+                <div class="rounded-circle bg-primary" style="width: 70%; height: 70%; opacity: .06;"></div>
+              </div>
+              <div class="parallax-layer d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" data-depth="0.2">
+                <div class="rounded-circle bg-primary" style="width: 55%; height: 55%; opacity: .06;"></div>
+              </div>
+              <div class="parallax-layer d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 zindex-3" data-depth="0.4">
+                <div class="d-flex justify-content-center align-items-center rounded-circle bg-primary" style="width: 93px; height: 93px; box-shadow: 0 .1875rem 1.875rem -.125rem rgba(99,102,241, .95); ">
+                  <span class="h5 text-light mb-0">400K+</span>
+                </div>
+              </div>
+              <div class="parallax-layer d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" data-depth="0.3">
+                <div class="rounded-circle bg-primary" style="width: 40%; height: 40%; opacity: .06;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
-            <span class="fa-stack">
-                <a href="https://twitter.com/Thusatharan">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x"></i>
+      <!-- Testimonials slider -->
+      <section class="container mb-5 pt-2 pb-3 py-md-4 py-lg-5">
+        <h2 class="h1 pb-2 pb-lg-0 mb-4 mb-lg-5 text-center">Success Stories</h2>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card border-0 shadow-sm p-4 p-xxl-5 mb-4 me-xxl-4">
+
+              <!-- Quotation mark -->
+              <div class="pb-4 mb-2">
+                <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none">
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+              </div>
+
+              <!-- Slider -->
+              <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
+                "spaceBetween": 24,
+                "pager": true,
+                "loop": true,
+                "tabs": true,
+                "navigation": {
+                  "prevEl": ".page-prev",
+                  "nextEl": ".page-next"
+                }
+              }'>
+                <div class="swiper-wrapper">
+
+                  <!-- Item -->
+                  <div class="swiper-slide h-auto" data-swiper-tab="#author-1">
+                    <figure class="card h-100 position-relative border-0 bg-transparent">
+                      <blockquote class="card-body p-0 mb-0">
+                        <p class="fs-lg mb-0">Dolor, a eget elementum, integer nulla volutpat, nunc, sit. Quam iaculis varius mauris magna sem. Egestas sed sed suscipit dolor faucibus dui imperdiet at eget. Tincidunt imperdiet quis hendrerit aliquam feugiat neque cras sed. Dictum quam integer volutpat tellus, faucibus platea. Pulvinar turpis proin faucibus at mauris. Sagittis gravida vitae porta enim, nulla arcu fermentum massa. Tortor ullamcorper lacus. Pellentesque lectus adipiscing aenean volutpat tortor habitant.</p>
+                      </blockquote>
+                      <figcaption class="card-footer border-0 d-sm-flex d-md-none w-100 pb-2">
+                        <div class="d-flex align-items-center border-end-sm pe-sm-4 me-sm-2">
+                          <img src="assets/img/avatar/01.jpg" width="48" class="rounded-circle" alt="Ralph Edwards">
+                          <div class="ps-3">
+                            <h5 class="fw-semibold lh-base mb-0">Ralph Edwards</h5>
+                            <span class="fs-sm text-muted">Head of Marketing</span>
+                          </div>
+                        </div>
+                        <img src="assets/img/brands/01.svg" width="160" class="d-block mt-2 ms-5 mt-sm-0 ms-sm-0" alt="Company logo">
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="swiper-slide h-auto" data-swiper-tab="#author-2">
+                    <figure class="card h-100 position-relative border-0 bg-transparent">
+                      <blockquote class="card-body p-0 mb-0">
+                        <p class="fs-lg mb-0">Mi semper risus ultricies orci pulvinar in at enim orci. Quis facilisis nunc pellentesque in ullamcorper sit. Lorem blandit arcu sapien, senectus libero, amet dapibus cursus quam. Eget pellentesque eu purus volutpat adipiscing malesuada. Purus nisi, tortor vel lacus. Donec diam molestie ultrices vitae eget pulvinar fames. Velit lacus mi purus velit justo, amet. Nascetur lobortis diam, duis orci.</p>
+                      </blockquote>
+                      <figcaption class="card-footer border-0 d-sm-flex d-md-none w-100 pb-2">
+                        <div class="d-flex align-items-center border-end-sm pe-sm-4 me-sm-2">
+                          <img src="assets/img/avatar/06.jpg" width="48" class="rounded-circle" alt="Annette Black">
+                          <div class="ps-3">
+                            <h5 class="fw-semibold lh-base mb-0">Annette Black</h5>
+                            <span class="fs-sm text-muted">Strategic Advisor</span>
+                          </div>
+                        </div>
+                        <img src="assets/img/brands/02.svg" width="160" class="d-block mt-2 ms-5 mt-sm-0 ms-sm-0" alt="Company logo">
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="swiper-slide h-auto" data-swiper-tab="#author-3">
+                    <figure class="card h-100 position-relative border-0 bg-transparent">
+                      <blockquote class="card-body p-0 mb-0">
+                        <p class="fs-lg mb-0">Ac at sed sit senectus massa. Massa ante amet ultrices magna porta tempor. Aliquet diam in et magna ultricies mi at. Lectus enim, vel enim egestas nam pellentesque et leo. Elit mi faucibus laoreet aliquam pellentesque sed aliquet integer massa. Orci leo tortor ornare id mattis auctor aliquam volutpat aliquet. Odio lectus viverra eu blandit nunc malesuada vitae eleifend pulvinar. In ac fermentum sit in orci.</p>
+                      </blockquote>
+                      <figcaption class="card-footer border-0 d-sm-flex d-md-none w-100 pb-2">
+                        <div class="d-flex align-items-center border-end-sm pe-sm-4 me-sm-2">
+                          <img src="assets/img/avatar/05.jpg" width="48" class="rounded-circle" alt="Darrell Steward">
+                          <div class="ps-3">
+                            <h5 class="fw-semibold lh-base mb-0">Darrell Steward</h5>
+                            <span class="fs-sm text-muted">Project Manager</span>
+                          </div>
+                        </div>
+                        <img src="assets/img/brands/04.svg" width="160" class="d-block mt-2 ms-5 mt-sm-0 ms-sm-0" alt="Company logo">
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination (Pager) -->
+            <nav class="pagination d-flex justify-content-center justify-content-md-start">
+              <div class="page-item me-2">
+                <a class="page-link page-prev btn-icon btn-sm" href="#" aria-label="Previous">
+                  <i class="bx bx-chevron-left"></i>
                 </a>
-            </span>
-            <span class="fa-stack">
-                <a href="https://github.com/Thusatharan">
-                    <i class=" fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x"></i>
+              </div>
+              <ul class="list-unstyled d-flex justify-content-center w-auto mb-0"></ul>
+              <div class="page-item ms-2">
+                <a class="page-link page-next btn-icon btn-sm" href="#" aria-label="Next">
+                  <i class="bx bx-chevron-right"></i>
                 </a>
-            </span>
-            <span class="fa-stack">
-                <a href="https://www.instagram.com/thusatharan/">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-instagram fa-stack-1x"></i>
-                </a>
-            </span>
-            <span class="fa-stack">
-                <a href="https://www.linkedin.com/in/thusatharan">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                </a>
-            </span>
-        </div> <!-- end of social-container -->
-        <!-- end of social links -->
+              </div>
+            </nav>
+          </div>
+          <div class="col-md-4 d-none d-md-block">
 
-    </header> <!-- end of header -->
-    <!-- end of header -->
+            <!-- Swiper tabs (Author images) -->
+            <div class="swiper-tabs">
+
+              <!-- Author image 1 -->
+              <div id="author-1" class="card bg-transparent border-0 swiper-tab active">
+                <div class="card-body p-0 rounded-3 bg-size-cover bg-repeat-0 bg-position-top-center" style="background-image: url(assets/img/testimonials/01.jpg);"></div>
+                <div class="card-footer d-flex w-100 border-0 pb-0">
+                  <img src="assets/img/brands/01.svg" width="160" class="d-none d-xl-block" alt="Company logo">
+                  <div class="border-start-xl ps-xl-4 ms-xl-2">
+                    <h5 class="fw-semibold lh-base mb-0">Ralph Edwards</h5>
+                    <span class="fs-sm text-muted">Head of Marketing <span class="d-xl-none d-inline">at Lorem Ltd.</span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Author image 2 -->
+              <div id="author-2" class="card bg-transparent border-0 swiper-tab">
+                <div class="card-body p-0 rounded-3 bg-size-cover bg-repeat-0 bg-position-top-center" style="background-image: url(assets/img/testimonials/02.jpg);"></div>
+                <div class="card-footer d-flex w-100 border-0 pb-0">
+                  <img src="assets/img/brands/02.svg" width="160" class="d-none d-xl-block" alt="Company logo">
+                  <div class="border-start-xl ps-xl-4 ms-xl-2">
+                    <h5 class="fw-semibold lh-base mb-0">Annette Black</h5>
+                    <span class="fs-sm text-muted">Strategic Advisor <span class="d-xl-none d-inline">at Company LLC</span></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Author image 3 -->
+              <div id="author-3" class="card bg-transparent border-0 swiper-tab">
+                <div class="card-body p-0 rounded-3 bg-size-cover bg-repeat-0 bg-position-top-center" style="background-image: url(assets/img/testimonials/03.jpg);"></div>
+                <div class="card-footer d-flex w-100 border-0 pb-0">
+                  <img src="assets/img/brands/04.svg" width="160" class="d-none d-xl-block" alt="Company logo">
+                  <div class="border-start-xl ps-xl-4 ms-xl-2">
+                    <h5 class="fw-semibold lh-base mb-0">Darrell Steward</h5>
+                    <span class="fs-sm text-muted">Project Manager <span class="d-xl-none d-inline">at Ipsum Ltd.</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/jquery.countdown.min.js"></script> <!-- The Final Countdown plugin for jQuery -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
-</body>
+      <!-- Services -->
+      <section class="container mb-5 pb-2 pb-md-4 pb-lg-5">
+        <div class="card border-0 bg-secondary p-md-5 px-sm-2 pt-4 pb-3">
+          <div class="card-body mx-auto" style="max-width: 860px;">
+            <h2 class="h1 mb-4 text-center">Frequently asked questions</h2>
+            <p class="mb-4 pb-3 fs-lg text-center text-muted">We fully understand your business. If you need to update something, we are more than happy to help you with the services we are providing.</p>
 
+            <!-- Accordion: Alternative style -->
+            <div class="accordion" id="accordion-services">
+
+              <!-- Item -->
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header" id="heading-1">
+                  <button class="accordion-button fs-xl shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">Digital Marketing</button>
+                </h3>
+                <div class="accordion-collapse collapse show" id="collapse-1" aria-labelledby="heading-1" data-bs-parent="#accordion-services">
+                  <div class="accordion-body pt-0">
+                    <div class="d-flex flex-md-row flex-column align-items-md-center">
+                      <img src="assets/img/landing/digital-agency/services/01.png" width="200" alt="Digital Marketing" class="me-md-4 mb-md-0 mb-3">
+                      <div class="ps-md-3">
+                        <p class="mb-0">Nisi, sed accumsan tincidunt pulvinar sapien. Neque, adipiscing posuere amet eget cursus mattis egestas nec quam. Tellus in lectus volutpat tellus bibendum. Etiam id phasellus in proin tristique. Semper habitasse volutpat et urna dui sed in pellentesque purus. Convallis viverra faucibus lacus nunc venenatis.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header" id="heading-2">
+                  <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">Web Development</button>
+                </h3>
+                <div class="accordion-collapse collapse" id="collapse-2" aria-labelledby="heading-2" data-bs-parent="#accordion-services">
+                  <div class="accordion-body pt-0">
+                    <div class="d-flex flex-md-row flex-column align-items-md-center">
+                      <img src="assets/img/landing/digital-agency/services/02.png" width="200" alt="Web Development" class="me-md-4 mb-md-0 mb-3">
+                      <div class="ps-md-3">
+                        <p class="mb-0">Vitae varius euismod egestas egestas lacus. Augue vitae arcu sollicitudin metus iaculis amet, eu at amet. Netus pulvinar tristique ridiculus sed. Viverra ut viverra aenean nisl. Tortor lorem cum congue a. Orci mattis massa tortor magna massa nisi, aliquet risus. Ornare cras aenean pellentesque quam pulvinar at. Libero mollis tortor erat sed. Adipiscing lectus nisi commodo vel. Id augue vitae, hendrerit iaculis.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header" id="heading-3">
+                  <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">Application Development</button>
+                </h3>
+                <div class="accordion-collapse collapse" id="collapse-3" aria-labelledby="heading-3" data-bs-parent="#accordion-services">
+                  <div class="accordion-body pt-0">
+                    <div class="d-flex flex-md-row flex-column align-items-md-center">
+                      <img src="assets/img/landing/digital-agency/services/03.png" width="200" alt="Application Development" class="me-md-4 mb-md-0 mb-3">
+                      <div class="ps-md-3">
+                        <p class="mb-0">Morbi tristique justo, ut ac facilisi vel. Faucibus tortor libero commodo maecenas commodo sed. Sapien, vitae senectus turpis enim habitasse ipsum justo. Sagittis vel tortor velit dapibus dictum facilisis dictumst aliquam. Et, tempus euismod non semper vitae egestas semper eget turpis. Eros, pellentesque sed ut faucibus ac egestas leo metus.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header" id="heading-4">
+                  <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">Strategy</button>
+                </h3>
+                <div class="accordion-collapse collapse" id="collapse-4" aria-labelledby="heading-4" data-bs-parent="#accordion-services">
+                  <div class="accordion-body pt-0">
+                    <div class="d-flex flex-md-row flex-column align-items-md-center">
+                      <img src="assets/img/landing/digital-agency/services/04.png" width="200" alt="Strategy" class="me-md-4 mb-md-0 mb-3">
+                      <div class="ps-md-3">
+                        <p class="mb-0">Non bibendum mauris velit at enim. Vel tellus nunc malesuada pellentesque feugiat nibh mauris blandit. Tempus, ut vulputate feugiat quis molestie sit eu blandit rhoncus. Iaculis eget magna sit eget eget massa. Diam nunc dolor tristique lectus imperdiet. Nunc, vitae etiam venenatis arcu turpis sollicitudin amet sit. Ac dapibus non erat sed. Auctor eleifend mattis scelerisque gravida felis nibh. Habitant nascetur turpis ullamcorper.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header" id="heading-5">
+                  <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="true" aria-controls="collapse-5">Digital Advertising</button>
+                </h3>
+                <div class="accordion-collapse collapse" id="collapse-5" aria-labelledby="heading-5" data-bs-parent="#accordion-services">
+                  <div class="accordion-body pt-0">
+                    <div class="d-flex flex-md-row flex-column align-items-md-center">
+                      <img src="assets/img/landing/digital-agency/services/05.png" width="200" alt="Digital Advertising" class="me-md-4 mb-md-0 mb-3">
+                      <div class="ps-md-3">
+                        <p class="mb-0">Nulla odio diam, arcu dictum neque nec cursus. Vel, aliquam nisl ridiculus sed. Pulvinar lectus ac pellentesque sollicitudin tristique aliquet ullamcorper in eu. Tincidunt porta magna faucibus neque, nunc gravida sagittis. Ut tellus sed odio laoreet. Molestie sit viverra maecenas nisl felis consequat.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+      <div class="container pt-2 pt-sm-4">
+        <div class="row">
+          <div class="col-md-6 col-lg-5 col-xl-4 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+              <img src="assets/img/fm_logo.png" width="150" alt="Silicon">
+            </div>
+            <p class="text-body mb-0">Suscipit ipsum tincidunt pellentesque vitae. Porttitor pellentesque enim consequat faucibus fermentum duis mollis facilisis pretium justo velit pretium nec ut imperdiet volutpat commodo facilisis.</p>
+          </div>
+          <div class="col-md-6 col-xxl-5 offset-lg-1 offset-xl-2 offset-xxl-3">
+            <div class="row row-cols-1 row-cols-sm-2">
+              <div class="col pb-2 pb-sm-0 mb-4 mb-sm-0">
+                <h3 class="h5 pb-1 pb-sm-2 pb-lg-3">Contact us</h3>
+                <ul class="nav flex-column mb-3">
+                  <li>
+                    <a href="tel:4065550120" class="nav-link fs-lg fw-normal px-0 py-1">
+                      <i class="bx bx-phone-call fs-4 me-2"></i>
+                      (406)&nbsp;555&#8209;0120
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:email@example.com" class="nav-link fs-lg fw-normal px-0 py-1">
+                      <i class="bx bx-envelope fs-4 me-2"></i>
+                      email@example.com
+                    </a>
+                  </li>
+                </ul>
+                <div class="d-flex pt-2 pt-sm-3 pt-md-4">
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-facebook rounded-circle me-3" aria-label="Facebook">
+                    <i class="bx bxl-facebook"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-linkedin rounded-circle me-3" aria-label="LinkedIn">
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-telegram rounded-circle me-3" aria-label="Telegram">
+                    <i class="bx bxl-telegram"></i>
+                  </a>
+                  <a href="#" class="btn btn-icon btn-sm btn-secondary btn-youtube rounded-circle me-3" aria-label="YouTube">
+                    <i class="bx bxl-youtube"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col ps-sm-4 ps-md-5">
+                <h3 class="h5 pb-1 pb-sm-2 pb-lg-3">Country</h3>
+                <div class="nav dropdown">
+                  <a href="#" class="nav-link dropdown-toggle fs-lg fw-normal px-0 py-1" data-bs-toggle="dropdown">
+                    <img src="assets/img/flags/en.png" class="me-2" width="20" alt="USA">
+                    USA
+                  </a>
+                  <div class="dropdown-menu my-1">
+                    <a href="#" class="dropdown-item fs-base pb-1">
+                      <img src="assets/img/flags/fr.png" class="me-2" width="20" alt="France">
+                      France
+                    </a>
+                    <a href="#" class="dropdown-item fs-base pb-1">
+                      <img src="assets/img/flags/de.png" class="me-2" width="20" alt="Germany">
+                      Germany
+                    </a>
+                    <a href="#" class="dropdown-item fs-base pb-1">
+                      <img src="assets/img/flags/it.png" class="me-2" width="20" alt="Italy">
+                      Italy
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="nav d-block fs-sm pt-5 mb-0">
+          <span class="opacity-60">&copy; All rights reserved. Made by </span>
+          <a class="nav-link d-inline-block p-0" href="https://createx.studio/" target="_blank" rel="noopener">iSoft Friends</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
 </html>
