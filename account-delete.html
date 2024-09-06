@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
     <title>Friends Matrimony</title>
@@ -27,7 +27,6 @@
 
     <!-- Vendor Styles -->
     <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
@@ -142,7 +141,7 @@
 
     <main class="page-wrapper">
 
-      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+      <header class="header navbar navbar-expand-lg bg-light border-bottom border-light shadow-sm fixed-top">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
             <img src="assets/img/logo_light.png" class="dark-mode-img" width="110" alt="FM Logo">
@@ -179,176 +178,228 @@
             </div>
             <div class="offcanvas-header border-top">
               <a href="signin.html" class="btn btn-primary w-100" target="_blank" rel="noopener">
-                <i class="bx bx-user fs-4 lh-1 me-1"></i>
-                &nbsp;Login
+                <i class="bx bx-log-out-circle fs-4 lh-1 me-1"></i>
+                &nbsp;Logout
               </a>
             </div>      
           </div>
-          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-0 me-sm-4" data-bs-toggle="mode">
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
             <input type="checkbox" class="form-check-input" id="theme-mode">
             <label class="form-check-label d-none d-sm-block" for="theme-mode"><i class='bx bx-sun'></i></label>
             <label class="form-check-label d-none d-sm-block" for="theme-mode"><i class='bx bx-moon'></i></label>
-          </div>
-          <div class="pe-lg-1 ms-auto me-4">
-            <button class="btn btn-secondary btn-icon rounded-circle position-relative" type="button" aria-label="Notify">
-              <i class="bx bx-bell"></i>
-              <span class="position-absolute top-10 start-100 translate-middle badge rounded-pill bg-danger">12</span>
-            </button>
           </div>
           <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <a href="signin.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
-            <i class="bx bx-user fs-5 lh-1 me-1"></i>
-            &nbsp;Login
+            <i class="bx bx-log-out-circle fs-5 lh-1 me-1"></i>
+            &nbsp;Logout
           </a>
         </div>
       </header>
 
+      <!-- Page content -->
+      <section class="container pt-5">
+        <div class="row">
 
-      <!-- Links + Contact form -->
-      <section class="position-relative bg-secondary pt-5">
-        <div class="container position-relative zindex-2 pt-5">
+          <!-- Sidebar (User info + Account menu) -->
+          <aside class="col-lg-3 col-md-4 border-end pb-5 mt-n5">
+            <div class="position-sticky top-0">
+              <div class="text-center pt-5">
+                <h2 class="h5 mt-2 mt-lg-4 pt-5 mb-1">John Doe</h2>
+                <p class="mb-3 pb-3">FMID120429</p>
+                <button type="button" class="btn btn-secondary w-100 d-md-none mt-n2 mb-3" data-bs-toggle="collapse" data-bs-target="#account-menu">
+                  <i class="bx bxs-user-detail fs-xl me-2"></i>
+                  Account menu
+                  <i class="bx bx-chevron-down fs-lg ms-1"></i>
+                </button>
+                <div id="account-menu" class="list-group list-group-flush collapse d-md-block">
 
-          <!-- Breadcrumb -->
-          <nav class="pt-lg-4 pb-3 mb-2 mb-sm-3" aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-              <li class="breadcrumb-item">
-                <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">Contacts</li>
-            </ol>
-          </nav>
+                    <a href="account-dashboard.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <i class="bx bx-chart fs-xl opacity-60 me-2"></i>
+                      Dashboard
+                    </a>
 
-          <div class="row">
+                    <a href="account-notifications.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <i class="bx bx-bell fs-xl opacity-60 me-2"></i>
+                      Notifications
+                    </a>
 
-            <!-- Contact links -->
-            <div class="col-xl-4 col-lg-5 pb-4 pb-sm-5 mb-2 mb-sm-0">
-              <div class="pe-lg-4 pe-xl-0">
-                <h1 class="pb-3 pb-md-4 mb-lg-5">Contact Us</h1>
-                <div class="d-flex align-items-start pb-3 mb-sm-1 mb-md-3">
-                  <div class="bg-light rounded-circle flex-shrink-0 fs-3 lh-1 p-3">
-                    <i class="bx bx-envelope"></i>
-                  </div>
-                  <div class="ps-3 ps-sm-4">
-                    <h2 class="h4 pb-1 mb-2">Email us</h2>
-                    <p class="mb-2">Please feel free to drop us a line. We will respond as soon as possible.</p>
-                    <div class="btn btn-link btn-lg px-0">
-                      Leave a message
-                      <i class="bx bx-right-arrow-alt lead ms-2"></i>
+                    <a href="account-messages.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <i class="bx bx-chat fs-xl opacity-60 me-2"></i>
+                      Messages
+                    </a>
+
+                    <a href="account-matches.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <i class="bx bx-heart-circle fs-xl opacity-60 me-2"></i>
+                      My Matches
+                    </a>
+
+                    <a href="account-shortlists.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <i class="bx bx-bookmark-heart fs-xl opacity-60 me-2"></i>
+                      My Shortlists
+                    </a>
+                    
+                    <a class="list-group-item list-group-item-action d-flex align-items-center" 
+                        href="#" data-bs-toggle="collapse" data-bs-target="#navAccount" aria-expanded="false"
+                        aria-controls="navAccount"
+                    >
+                      <i class="bx bx-cog fs-xl opacity-60 me-2"></i> Account Details
+                    </a>
+                    <div id="navAccount" class="collapse" data-bs-parent="#sideNavbar">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="account-basic.html">
+                                  Basic Information
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="account-parents.html">
+                                  Parents Details
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="account-astro.html">
+                                Astro Details
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="account-personal.html">
+                                Personal Details
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="account-about.html">
+                                About Me
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="account-preferences.html">
+                                Partner Preferences
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="account-references.html">
+                                References
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="account-siblings.html">
+                                Siblings Details
+                              </a>
+                            </li>
+                        </ul>
                     </div>
-                  </div>
-                </div>
-                <div class="d-flex align-items-start">
-                  <div class="bg-light rounded-circle flex-shrink-0 fs-3 lh-1 p-3">
-                    <i class="bx bx-group"></i>
-                  </div>
-                  <div class="ps-3 ps-sm-4">
-                    <h2 class="h4 pb-1 mb-2">Careers</h2>
-                    <p class="mb-2">Sit ac ipsum leo lorem magna nunc mattis maecenas non vestibulum.</p>
-                    <div class="btn btn-link btn-lg px-0">
-                      Send an application
-                      <i class="bx bx-right-arrow-alt lead ms-2"></i>
+
+                    <a href="account-photos.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <i class="bx bx-images fs-xl opacity-60 me-2"></i>
+                      Photos
+                    </a>
+
+                    <a href="account-horoscope.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <i class="bx bx-user-pin fs-xl opacity-60 me-2"></i>
+                      Horoscope
+                    </a>
+
+                    <a class="list-group-item list-group-item-action d-flex align-items-center" 
+                        href="#" data-bs-toggle="collapse" data-bs-target="#navPrivacy" aria-expanded="false"
+                        aria-controls="navPrivacy"
+                    >
+                      <i class="bx bx-no-entry fs-xl opacity-60 me-2"></i> Privacy
+                    </a>
+                    <div id="navPrivacy" class="collapse" data-bs-parent="#sideNavbar">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="account-profile-privacy.html">
+                                  Profile
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="account-photo-privacy.html">
+                                  Photo
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="account-message-privacy.html">
+                                Messages
+                              </a>
+                          </li>
+                        </ul>
                     </div>
-                  </div>
+
+                    <a href="account-subscription.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <i class="bx bx-credit-card-front fs-xl opacity-60 me-2"></i>
+                      Subscription 
+                    </a>
+
+                    <a href="account-settings.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <i class="bx bx-cog fs-xl opacity-60 me-2"></i>
+                      Settings 
+                    </a>
+
+                    <a href="account-delete.html" class="list-group-item list-group-item-action d-flex align-items-center active">
+                      <i class="bx bx-user-x fs-xl opacity-60 me-2"></i>
+                      Delete My Profile
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                      <i class="bx bx-log-out-circle fs-xl opacity-60 me-2"></i>
+                      Logout
+                    </a>
                 </div>
               </div>
             </div>
+          </aside>
 
-            <!-- Contact form -->
-            <div class="col-xl-6 col-lg-7 offset-xl-2">
-              <div class="card border-light shadow-lg py-3 p-sm-4 p-md-5">
-                <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
-                <div class="card-body position-relative zindex-2">
-                  <form class="row g-4 needs-validation" novalidate>
-                    <div class="col-12">
-                      <label for="fn" class="form-label fs-base">Full name</label>
-                      <input type="text" class="form-control form-control-lg" id="fn" required>
-                      <div class="invalid-feedback">Please enter your full name!</div>
-                    </div>
-                    <div class="col-12">
-                      <label for="email" class="form-label fs-base">Email address</label>
-                      <input type="email" class="form-control form-control-lg" id="email" required>
-                      <div class="invalid-feedback">Please provid a valid email address!</div>
-                    </div>
-                    <div class="col-12">
-                      <label for="specialist" class="form-label fs-base">Specialist</label>
-                      <select class="form-select form-select-lg" id="specialist" required>
-                        <option value="" selected disabled>Choose a specialist</option>
-                        <option value="Therapist">Therapist</option>
-                        <option value="Dentist">Dentist</option>
-                        <option value="Cardiologist">Cardiologist</option>
-                        <option value="Pediatrician">Pediatrician</option>
-                        <option value="Gynecologist">Gynecologist</option>
-                        <option value="Surgeon">Surgeon</option>
-                      </select>
-                      <div class="invalid-feedback">Choose a specialist from the list!</div>
-                    </div>
-                    <div class="col-sm-6">
-                      <label for="date" class="form-label fs-base">Date</label>
-                      <input type="text" class="form-control form-control-lg" id="date" data-format='{"date": true, "datePattern": ["m", "d"]}' placeholder="mm/dd" required>
-                      <div class="invalid-feedback">Enter a date!</div>
-                    </div>
-                    <div class="col-sm-6">
-                      <label for="time" class="form-label fs-base">Time</label>
-                      <input type="text" class="form-control form-control-lg" id="time" data-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm" required>
-                      <div class="invalid-feedback">Enter a time!</div>
-                    </div>
-                    <div class="col-12 pt-2 pt-sm-3">
-                      <button type="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Send Message</button>
-                    </div>
-                  </form>
-                </div>
+
+          <!-- Account notifications -->
+          <div class="col-md-8 offset-lg-1 pb-5 mb-lg-4 pt-md-5 mt-n3 mt-md-0">
+            <form class="ps-md-3 ps-lg-0 mt-md-2 pt-md-4 pb-md-2">
+              <div class="pt-xl-1 mb-3 pb-3">
+                <h1 class="h2 mb-0">Delete My Profile</h1>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="position-absolute bottom-0 start-0 w-100 bg-light" style="height: 8rem;"></div>
-      </section>
+              
+              <div>
+                <p>
+                  If you have found a partner, hence your reason to delete your profile, we will be more than happy to hear your success story.
+                </p>
+                <p>
+                  Please select the reason for removing your profile.
+                </p>
 
+                <div class="mb-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" id="ex-radio-1" name="radio" checked>
+                    <label class="form-check-label" for="ex-radio-1">I've found a partner on Friends Matrimony</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" id="ex-radio-2" name="radio">
+                    <label class="form-check-label" for="ex-radio-2">I've found a partner somewhere else</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" id="ex-radio-3" name="radio">
+                    <label class="form-check-label" for="ex-radio-3">Other reason (You can tell us more in the textbox below)</label>
+                  </div>
+                </div>
 
-      <!-- Branches -->
-      <section class="container py-2 py-lg-4 py-xl-5 mb-2 mb-md-3">
-        <div class="row py-5">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <div class="d-flex flex-column h-100 shadow-sm rounded-3 overflow-hidden">
-              <iframe class="d-block h-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23033.782320372746!2d-79.257191!3d43.809738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d130255cd78d%3A0x18ecd85698c81779!2s5215%20Finch%20Ave%20E%2C%20Scarborough%2C%20ON%20M1S%204Z8%2C%20Canada!5e0!3m2!1sen!2sus!4v1721649989424!5m2!1sen!2sus" style="border: 0; min-height: 300px;" allowfullscreen="" loading="lazy" title="Map"></iframe>
-            </div>
-          </div>
-          <div class="col-lg-5 offset-lg-1">
-            <h2 class="h4 mb-4">Office Address</h2>
-            <ul class="list-unstyled pb-2 pb-lg-0 mb-4 mb-lg-5">
-              <li class="d-flex pb-1 mb-2">
-                <i class="bx bx-map fs-xl me-2" style="margin-top: .125rem;"></i>
-                GTA Square- 5215 Finch Ave. E. Unit 257, Toronto, M1S 0C2.
-              </li>
-              <li class="d-flex pb-1 mb-2">
-                <i class="bx bx-phone-call fs-xl me-2" style="margin-top: .125rem;"></i>
-                +1 416 477 2259 / +1 647 709 1536
-              </li>
-              <li class="d-flex">
-                <i class="bx bx-time-five fs-xl me-2" style="margin-top: .125rem;"></i>
+                <p>
+                  Whichever your reason, please provide optional additional information regarding your decision and feedback about our services.
+                </p>
                 <div>
-                  <strong class="text-nav">Mon - Fri</strong>: 9:00 am - 22:00 am
-                  <br>
-                  <strong class="text-nav">Sat - Sun:</strong>: 9:00 am - 20:00 am
+                  <textarea type="text" id="about" rows="8" class="form-control form-control-lg" value="About" required></textarea>
                 </div>
-              </li>
-            </ul>
-            <div class="d-flex pt-1 pt-md-3">
-              <a href="#" class="btn btn-icon btn-secondary btn-facebook me-3" aria-label="Facebook">
-                <i class="bx bxl-facebook"></i>
-              </a>
-              <a href="#" class="btn btn-icon btn-secondary btn-instagram me-3" aria-label="Instagram">
-                <i class="bx bxl-instagram"></i>
-              </a>
-              <a href="#" class="btn btn-icon btn-secondary btn-twitter me-3" aria-label="Twitter">
-                <i class="bx bxl-twitter"></i>
-              </a>
-              <a href="#" class="btn btn-icon btn-secondary btn-youtube" aria-label="YouTube">
-                <i class="bx bxl-youtube"></i>
-              </a>
-            </div>
+
+              </div>
+
+              <div class="pt-3 mb-3">
+                <span class="text-danger h4">Warning</span>
+                <p>
+                  Please note that deleting your profile would also cancel all current subscriptions. Contact us if you need more information.
+                </p>
+                <button class="btn btn-danger">Yes, Delete My Account</button>
+              </div>
+
+            </form>
           </div>
         </div>
       </section>
@@ -356,7 +407,7 @@
 
 
     <!-- Footer -->
-    <footer class="footer py-5">
+    <footer class="footer bg-dark border-top border-light pt-5 pb-4 pb-lg-5" data-bs-theme="dark">
       <div class="container pt-2 pt-sm-4">
         <div class="row">
           <div class="col-md-6 col-lg-5 col-xl-4 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
@@ -440,9 +491,6 @@
       <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
     </a>
 
-
-    <!-- Vendor Scripts -->
-    <script src="assets/vendor/cleave.js/dist/cleave.min.js"></script>
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>

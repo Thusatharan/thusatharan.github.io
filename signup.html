@@ -142,7 +142,7 @@
 
     <main class="page-wrapper">
 
-      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky bg-dark" data-bs-theme="dark">
+      <header class="header navbar navbar-expand-lg bg-dark position-absolute navbar-sticky">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
             <img src="assets/img/logo_light.png" class="dark-mode-img" width="110" alt="FM Logo">
@@ -184,10 +184,16 @@
               </a>
             </div>      
           </div>
-          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-0 me-sm-4" data-bs-toggle="mode">
             <input type="checkbox" class="form-check-input" id="theme-mode">
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"><i class='bx bx-sun'></i></label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"><i class='bx bx-moon'></i></label>
+          </div>
+          <div class="pe-lg-1 ms-auto me-4">
+            <button class="btn btn-secondary btn-icon rounded-circle position-relative" type="button" aria-label="Notify">
+              <i class="bx bx-bell"></i>
+              <span class="position-absolute top-10 start-100 translate-middle badge rounded-pill bg-danger">12</span>
+            </button>
           </div>
           <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -208,26 +214,26 @@
           <div class="w-100 align-self-end pt-1 pt-md-4 pb-4" style="max-width: 526px;">
             <h1 class="text-center text-xl-start">Create Account</h1>
             <p class="text-center text-xl-start pb-3 mb-3">Already have an account? <a href="signin.html">Sign in here.</a></p>
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="position-relative mb-4">
                     <label for="name" class="form-label fs-base">Full name</label>
-                    <input type="text" id="name" class="form-control form-control-lg" required>
+                    <input type="text" id="name" class="form-control form-control-lg">
                     <div class="invalid-feedback position-absolute start-0 top-100">Please enter your name!</div>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="position-relative mb-4">
                     <label for="email" class="form-label fs-base">Email</label>
-                    <input type="email" id="email" class="form-control form-control-lg" required>
+                    <input type="email" id="email" class="form-control form-control-lg">
                     <div class="invalid-feedback position-absolute start-0 top-100">Please enter a valid email address!</div>
                   </div>
                 </div>
                 <div class="col-12 mb-4">
                   <label for="password" class="form-label fs-base">Password</label>
                   <div class="password-toggle">
-                    <input type="password" id="password" class="form-control form-control-lg" required>
+                    <input type="password" id="password" class="form-control form-control-lg">
                     <label class="password-toggle-btn" aria-label="Show/hide password">
                       <input class="password-toggle-check" type="checkbox">
                       <span class="password-toggle-indicator"></span>
@@ -238,7 +244,7 @@
                 <div class="col-12 mb-4">
                   <label for="password-confirm" class="form-label fs-base">Confirm password</label>
                   <div class="password-toggle">
-                    <input type="password" id="password-confirm" class="form-control form-control-lg" required>
+                    <input type="password" id="password-confirm" class="form-control form-control-lg">
                     <label class="password-toggle-btn" aria-label="Show/hide password">
                       <input class="password-toggle-check" type="checkbox">
                       <span class="password-toggle-indicator"></span>
@@ -253,7 +259,7 @@
                   <label for="terms" class="form-check-label fs-base">I agree to <a href="#">Terms &amp; Conditions</a></label>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary shadow-primary btn-lg w-100">Sign up</button>
+              <a href="account-dashboard.html" class="btn btn-primary shadow-primary btn-lg w-100">Sign up</a>
             </form>
           </div>
           <div class="w-100 align-self-end">
